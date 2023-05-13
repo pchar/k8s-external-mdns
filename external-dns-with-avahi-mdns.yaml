@@ -57,7 +57,8 @@ spec:
       serviceAccountName: external-dns
       containers:
       - name: external-dns
-        image: quay.io/pch/external-dns:latest
+        image: quay.io/pch/external-dns:1.0
+        imagePullPolicy: Always  # Set image pull policy to Always
         command: ["/bin/external-dns"]
         args: ["--provider", "hosts", "--source", "service", "--log-level=debug"]
         volumeMounts:
