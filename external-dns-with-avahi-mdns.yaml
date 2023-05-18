@@ -60,7 +60,7 @@ spec:
         image: quay.io/pch/external-dns:1.0
         imagePullPolicy: Always  # Set image pull policy to Always
         command: ["/bin/external-dns"]
-        args: ["--provider", "hosts", "--source", "service", "--log-level=debug"]
+        args: ["--provider", "hosts", "--source", "service", "--log-level=info"]
         volumeMounts:
         - mountPath: /etc/avahi/hosts
           name: hosts
