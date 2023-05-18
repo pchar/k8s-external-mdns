@@ -45,7 +45,7 @@ Install Avahi mDNS daemon on the master node
 
 Install fork of ExternalDNS
 
-    kubectl apply -f https://raw.githubusercontent.com/tsaarni/k8s-external-mdns/master/external-dns-with-avahi-mdns.yaml
+    kubectl apply -f https://raw.githubusercontent.com/pchar/k8s-external-mdns/master/external-dns-with-avahi-mdns.yaml
 
 
 ExternalDNS listens for externally published services and writes hosts
