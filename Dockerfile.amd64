@@ -5,6 +5,6 @@ RUN git clone --depth 1 https://github.com/tsaarni/external-dns-hosts-provider-f
     make dep && \
     GOOS=linux GOARCH=amd64 make build
 
-FROM arm64v8/alpine:latest
+FROM alpine:latest
 COPY --from=builder /go/src/github.com/kubernetes-incubator/external-dns/build/external-dns /bin/external-dns
 ENTRYPOINT ["/bin/external-dns"]
